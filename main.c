@@ -1,28 +1,37 @@
-// *2D arrays
+//*3d arrays
 #include<stdio.h>
+int i,j,k;
 int main()
 {
-   int i, j;
-   for(i=0; i<2; i++)
-    {
-      for(j=0;j<3;j++)
-       {
-         printf("Enter value for [%d][%d]:", i, j);
-         scanf("%d",&i,j);
-      }
-   }
-   printf("Two Dimensional array elements:\n");
-   for(i=0; i<2; i++)
-
-   {
-      for(j=0;j<3;j++)
-      {
-         printf("%d ",i,j);
-         if(j==2){
-            printf("\n");
-         }
-      }
-   }
-   return 0;
+	int arr[3][4][2];
+	printf("enter the values in the array: \n");
+	for(i=1;i<=2;i++)
+	{
+		for(j=1;j<=3;j++)
+		{
+			for(k=1;k<=3;k++)
+			{
+				printf("the value at arr[%d][%d][%d]: ",i,j,k);
+				scanf("%d",&arr[i][j][k]);
+			}
+		}
+	}
+	printf("printing the values in array: \n");
+	for(i=1;i<=2;i++)
+	{
+		for(j=1;j<=3;j++)
+		{
+			for(k=1;k<=3;k++)
+			{
+				printf("%d ",arr[i][j][k]);
+				if(k==3)
+				{
+					printf("\n");
+				}
+			}
+		}
+		printf("\n");
+	}
+	return 0;
 }
 
